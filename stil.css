@@ -1,0 +1,376 @@
+/* homepage + lucruri comune */
+
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    width: 100%;
+}
+
+#cnter{
+    position: absolute;
+    right: 5px;
+}
+
+.meniu{
+    color: white;
+    background-color: darkred;
+    overflow: hidden;
+}
+
+.meniu .pag{
+    display: inline-block;
+    font-size: 26px;
+    border-right: 2px white solid;
+}
+
+.meniu .pag a{
+    padding: 10px 10px;
+    margin:auto;
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+
+.meniu .pag :hover{
+    background-color: brown;
+    transform: scale(1.10,1.10);
+}
+
+.meniu .resp{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .meniu{
+        overflow: hidden;
+    }
+    .meniu a:nth-child(n+1):nth-child(-n+5) {display: none;}
+    .meniu .resp {
+      float:left;
+      background-color: red;
+      color:white;
+      font-size: 20px;
+      padding: 14px 16px;
+      display: block;
+    }
+    .meniu .resp:hover{
+        background-color: brown;
+        font-size: 22px;
+    }
+    .meniu .resp:visited{
+        color:white;
+        background-color: red;
+        font-size: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .meniu-responsive {position: relative;}
+    .meniu-responsive .resp {
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 20px;
+      visibility: hidden;
+    }
+    .meniu-responsive .resp::after{
+        content: "Close";
+        color: lightgrey;
+        visibility: visible;
+        font-size: 24px;
+        text-decoration:line-through;
+        padding-right: 10px;
+      }
+    .meniu-responsive div {
+      float: none;
+      display: block;
+      text-align: left;
+      color:white;
+      background-color: red;
+      font-size: 16px;
+      text-decoration: none;
+    }
+    .meniu-responsive div a:visited{
+        color: white;
+        text-decoration: none;
+    }
+    .meniu-responsive div:hover {
+        color:brown;
+        font-size: 20px;
+      }
+  }
+
+
+
+#titluHome{
+    text-align: center;
+}
+
+.container{
+    margin: auto;
+    width: 450px;
+    height: 300px;
+    display:grid;
+    justify-content: center;
+    background-image: url(teren.jpg);
+    grid-template-areas:'. . . . . . . .' 
+                        'c1 c1 c1 c2 c2 c2 c3 c3'
+                         'c4 c4 c4 c5 c5 c5 c6 c6 '
+                         'c7 c7 c8 c8 c9 c9 c10 c10'
+                         '. . c11 c11 c11 c11 c11 c11';
+}
+
+.container div div{
+    margin: auto;
+    background-color: red;
+    border-radius: 50%;
+    width:10px;
+    height:10px;
+}
+
+.container div{
+    font-size: 16px;
+    text-align: center;
+}
+
+.cerc1{
+    grid-area: c1;
+}
+
+.cerc2{
+    grid-area: c2;
+}
+
+.cerc3{
+    grid-area: c3;
+}
+
+.cerc4{
+    grid-area: c4;
+}
+
+.cerc5{
+    grid-area: c5;
+}
+
+.cerc6{
+    grid-area: c6;
+}
+
+.cerc7{
+    grid-area: c7;
+}
+
+.cerc8{
+    grid-area: c8;
+}
+
+.cerc9{
+    grid-area: c9;
+}
+
+.cerc10{
+    grid-area: c10;
+}
+
+.cerc11{
+    grid-area: c11;
+}
+
+
+.welcome{
+    padding: 5px;
+    color: white;
+    background-color: darkred;
+    top:20%;
+    left:5%;
+    font-size: 26px;
+    position: absolute;
+    width: 300px;
+}
+
+@keyframes show{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes remove{
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+  .footer {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 40px 160px, rgba(17, 17, 26, 0.1) 0px 80px 240px, rgba(17, 17, 26, 0.1) 0px 160px 560px;
+    width: 100%;
+    position: relative;
+    margin-top: 200px;
+    height: auto;
+    background-color:darkred;
+  }
+  .footer .col {
+    width: 190px;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0px 20px 20px 20px;
+  }
+  .footer .col h1 {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 20px 0px 5px 0px;
+    color: gray;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.250em;
+  }
+  .footer .col ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .footer .col ul li {
+    color: white;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 5px 0px 5px 0px;
+    cursor: pointer;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+  }
+  .social ul li {
+    display: inline-block;
+    padding-right: 5px !important;
+  }
+  
+  .footer .col ul li:hover {
+    color: gray;
+    transition: .1s;
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+  }
+  .clearfix {
+    clear: both;
+  }
+  @media only screen and (min-width: 1280px) {
+    .contain {
+      width: 1200px;
+      margin: 0 auto;
+    }
+  }
+
+  /* pag echipa */
+
+#h3e{
+    text-align: center;
+}
+
+  .dropdown{
+    margin-top: 5%;
+    width: 18.5%;
+    margin-left: auto;
+    margin-right: auto;
+    height:300px;
+    
+  }
+
+  .dropdown .minge{
+    width:100%;
+    height:300px;
+    background-image: url("ball.png");
+  }
+
+  .dropdown .dropdownsub{
+    background-color: darkred;
+    color: white;
+    border: 0.5px gray solid;
+    position: relative;
+    display: none;
+  }
+
+  .dropdown:hover .dropdownsub{
+    display: block;
+    animation: show 1s ease-in;
+  }
+
+
+#h3jucator{
+    margin-left: 1%;
+}
+
+input{
+    margin-left: 1%;
+}
+
+
+button{
+    margin-left: 3%;
+    color: white;
+    background-color: darkred;
+    border-radius: 20%;
+}
+
+
+/*pag istoric*/
+
+.flexus {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    width:75%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: darkred;
+  }
+  
+  .flexus > div {
+    height:200px;
+    border: 3px black solid;
+    background-color: #f1f1f1;
+    width: 300px;
+    margin: 35px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+    .flexus > div:hover {
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 12px 14px 0px, rgba(14, 30, 37, 0.32) 0px 12px 160px 0px;
+  }
+
+  .flexus #tr{
+    background-image: url("cupa.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .flexus #ci{
+    background-image: url("team.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .flexus #sas{
+    background-image: url("stadium.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
